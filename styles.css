@@ -664,7 +664,7 @@ a {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: white;
+  background: rgba(254, 254, 254, 0.12);
   color: var(--primary-dark);
   display: grid;
   place-items: center;
