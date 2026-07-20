@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة إدارة FastLink</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">FastLink</a>
+        <nav class="nav-links">
+          <a href="index.html">الصفحة الرئيسية</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-page">
+      <div class="container">
+        <div id="admin-login" class="auth-card">
+          <h2>دخول لوحة الإدارة</h2>
+          <p>أدخل كلمة المرور للوصول إلى تعديل الباقات والعروض والرواتر.</p>
+          <form id="admin-login-form" class="auth-form">
+            <input type="password" id="adminPassword" placeholder="كلمة المرور" required />
+            <button type="submit" class="btn btn-primary">دخول</button>
+            <p id="admin-error" class="error-text"></p>
+          </form>
+        </div>
+
+        <div id="admin-content" class="hidden">
+          <div class="section-heading">
+            <span class="eyebrow">لوحة الإدارة</span>
+            <h1>إدارة الباقات والعروض والرواتر</h1>
+            <p>غيّر الأسعار، أضف باقات جديدة أو احذف باقة، وأضف أو احذف رواتر بسهولة.</p>
+          </div>
+
+          <section class="admin-card">
+            <h2>تعديل العرض الحالي</h2>
+            <form id="offer-form" class="admin-form">
+              <label>
+                عنوان العرض
+                <input type="text" id="offerTitle" required />
+              </label>
+              <label>
+                وصف العرض
+                <textarea id="offerText" rows="3" required></textarea>
+              </label>
+              <label>
+                مدة العرض
+                <input type="text" id="offerDuration" required />
+              </label>
+              <button type="submit" class="btn btn-primary">حفظ العرض</button>
+            </form>
+          </section>
+
+          <section class="admin-card">
+            <h2>إضافة باقة جديدة</h2>
+            <form id="package-form" class="admin-form">
+              <label>
+                اسم الباقة
+                <input type="text" id="packageName" required />
+              </label>
+              <label>
+                السرعة
+                <input type="text" id="packageSpeed" required />
+              </label>
+              <label>
+                السعر الشهري
+                <input type="number" id="packagePrice" required />
+              </label>
+              <label>
+                السعر بعد العرض
+                <input type="number" id="packagePromoPrice" required />
+              </label>
+              <label>
+                المدة
+                <input type="text" id="packageDuration" required />
+              </label>
+              <label>
+                الوصف
+                <textarea id="packageDescription" rows="3"></textarea>
+              </label>
+              <p id="package-edit-status" class="status-text"></p>
+              <button type="submit" id="package-submit-btn" class="btn btn-primary">إضافة باقة</button>
+            </form>
+            <div id="packages-admin-list" class="admin-list"></div>
+          </section>
+
+          <section class="admin-card">
+            <h2>إضافة أو تعديل روتر</h2>
+            <form id="router-form" class="admin-form">
+              <label>
+                اسم الروتر
+                <input type="text" id="routerName" required />
+              </label>
+              <label>
+                اسم الشركة
+                <input type="text" id="routerCompany" required />
+              </label>
+              <label>
+                النوع
+                <input type="text" id="routerType" required />
+              </label>
+              <label>
+                رابط صورة الروتر (اختياري)
+                <input type="text" id="routerImage" placeholder="assets/router-1.svg" />
+              </label>
+              <label>
+                أو اختيار صورة من الجهاز
+                <input type="file" id="routerImageFile" accept="image/*" />
+              </label>
+              <label>
+                وصف الروتر
+                <textarea id="routerDescription" rows="3" required></textarea>
+              </label>
+              <label>
+                عنوان خطوة الإعداد 1
+                <input type="text" id="routerStep1Title"  />
+              </label>
+              <label>
+                وصف خطوة الإعداد 1
+                <textarea id="routerStep1Text" rows="2" ></textarea>
+              </label>
+              <label>
+                صورة خطوة الإعداد 1 (اختياري)
+                <input type="text" id="routerStep1Image" placeholder="assets/router-1.svg" />
+              </label>
+              <label>
+                أو اختيار صورة من الجهاز
+                <input type="file" id="routerStep1ImageFile" accept="image/*" />
+              </label>
+              <label>
+                عنوان خطوة الإعداد 2
+                <input type="text" id="routerStep2Title"  />
+              </label>
+              <label>
+                وصف خطوة الإعداد 2
+                <textarea id="routerStep2Text" rows="2" ></textarea>
+              </label>
+              <label>
+                صورة خطوة الإعداد 2 (اختياري)
+                <input type="text" id="routerStep2Image" placeholder="assets/router-2.svg" />
+              </label>
+              <label>
+                أو اختيار صورة من الجهاز
+                <input type="file" id="routerStep2ImageFile" accept="image/*" />
+              </label>
+              <label>
+                عنوان خطوة الإعداد 3
+                <input type="text" id="routerStep3Title"  />
+              </label>
+              <label>
+                وصف خطوة الإعداد 3
+                <textarea id="routerStep3Text" rows="2" ></textarea>
+              </label>
+              <label>
+                صورة خطوة الإعداد 3 (اختياري)
+                <input type="text" id="routerStep3Image" placeholder="assets/router-3.svg" />
+              </label>
+              <label>
+                أو اختيار صورة من الجهاز
+                <input type="file" id="routerStep3ImageFile" accept="image/*" />
+              </label>
+              <p id="router-edit-status" class="status-text"></p>
+              <button type="submit" id="router-submit-btn" class="btn btn-primary">إضافة روتر</button>
+            </form>
+            <div id="routers-admin-list" class="admin-list"></div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
