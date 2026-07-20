@@ -284,6 +284,28 @@ a {
   color: #dceeff;
 }
 
+.admin-float-btn {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(11, 79, 184, 0.12);
+  color: var(--primary-dark);
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 30;
+}
+
+.admin-float-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 .router-mode-btn {
   margin-top: 0.9rem;
   width: 100%;
