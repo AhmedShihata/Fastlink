@@ -91,7 +91,7 @@ const defaultData = {
 
 function loadData() {
   const saved = localStorage.getItem(STORAGE_KEY);
-  if (!saved) return defaultData;
+  if (saved) return defaultData;
   try {
     const parsed = JSON.parse(saved);
     return {
