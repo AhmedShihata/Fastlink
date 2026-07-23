@@ -112,41 +112,6 @@ function renderHero(data) {
   document.getElementById("hero-subtitle").textContent = data.heroSubtitle;
 }
 
-function renderRouters(data) {
-  const container = document.getElementById("routers-list");
-  const routers = Array.isArray(data.routers) ? data.routers : [];
-  container.innerHTML = routers
-    .map(
-      (router, index) => `
-        <article class="card">
-          <img src="${router.image || "assets/router-1.svg"}" alt="${router.name || "روتر"}" />
-          <h3>${router.name || "روتر"}</h3>
-          <p>${router.company || "FastLink"}</p>
-          <p>${router.type || ""}</p>
-          <p>${router.description || ""}</p>
-          <a class="btn btn-secondary router-mode-btn" href="router-mode.html?router=${index}">عرض طريقة الضبط</a>
-        </article>
-      `
-    )
-    .join("");
-}
-
-function renderSteps(data) {
-  const container = document.getElementById("setup-steps");
-  if (!container) return;
-  const steps = Array.isArray(data.steps) ? data.steps : [];
-  container.innerHTML = steps
-    .map(
-      (step) => `
-        <div class="timeline-item">
-          <h3>${step.title || ""}</h3>
-          <p>${step.description || ""}</p>
-        </div>
-      `
-    )
-    .join("");
-}
-
 function renderPackages(data) {
   const container = document.getElementById("packages-list");
   const packages = Array.isArray(data.packages) ? data.packages : [];
