@@ -1,0 +1,117 @@
+mutation CreateUser @auth(level: USER) {
+  user_insert(data: {
+    id_expr: "auth.uid",
+    email: "user@example.com",
+    displayName: "New User"
+  })
+}
+
+mutation UpdateUser @auth(level: USER) {
+  user_update(key: {id_expr: "auth.uid"}, data: {displayName: "Updated Name"})
+}
+
+mutation DeleteUser @auth(level: USER) {
+  user_delete(key: {id_expr: "auth.uid"})
+}
+
+query GetUser @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    email
+    displayName
+  }
+}
+
+query ListUsers @auth(level: PUBLIC, insecureReason: "Publicly accessible user profiles are required for the community feature.") {
+  users {
+    displayName
+    avatarUrl
+  }
+}
+
+mutation CreateContent @auth(level: USER) {
+  content_insert(data: {
+    title: "My Post",
+    body: "Hello World",
+    status: "published",
+    authorId_expr: "auth.uid"
+  })
+}
+
+mutation UpdateContent @auth(level: USER) {
+  content_update(key: {id: "00000000-0000-0000-0000-000000000000"}, data: {status: "archived"})
+}
+
+mutation DeleteContent @auth(level: USER) {
+  content_delete(key: {id: "00000000-0000-0000-0000-000000000000"})
+}
+
+query GetContent @auth(level: PUBLIC, insecureReason: "Public content is required for the feed.") {
+  content(id: "00000000-0000-0000-0000-000000000000") {
+    title
+    body
+  }
+}
+
+query ListContents @auth(level: PUBLIC, insecureReason: "Public content is required for the feed.") {
+  contents {
+    title
+    author { displayName }
+  }
+}
+
+mutation CreateInteraction @auth(level: USER) {
+  interaction_insert(data: {
+    type: "like",
+    userId_expr: "auth.uid",
+    contentId: "00000000-0000-0000-0000-000000000000"
+  })
+}
+
+mutation DeleteInteraction @auth(level: USER) {
+  interaction_delete(key: {id: "00000000-0000-0000-0000-000000000000"})
+}
+
+query ListInteractions @auth(level: USER) {
+  interactions(where: {userId: {eq_expr: "auth.uid"}}) {
+    type
+    content { title }
+  }
+}
+
+mutation CreateNotification @auth(level: USER) {
+  notification_insert(data: {
+    message: "New interaction",
+    isRead: false,
+    userId_expr: "auth.uid"
+  })
+}
+
+mutation UpdateNotification @auth(level: USER) {
+  notification_update(key: {id: "00000000-0000-0000-0000-000000000000"}, data: {isRead: true})
+}
+
+query ListNotifications @auth(level: USER) {
+  notifications(where: {userId: {eq_expr: "auth.uid"}}) {
+    message
+    isRead
+  }
+}
+
+mutation CreateDeviceToken @auth(level: USER) {
+  deviceToken_insert(data: {
+    token: "fcm_token_string",
+    platform: "ios",
+    userId_expr: "auth.uid"
+  })
+}
+
+mutation DeleteDeviceToken @auth(level: USER) {
+  deviceToken_delete(key: {id: "00000000-0000-0000-0000-000000000000"})
+}
+
+query ListDeviceTokens @auth(level: USER) {
+  deviceTokens(where: {userId: {eq_expr: "auth.uid"}}) {
+    token
+    platform
+  }
+}

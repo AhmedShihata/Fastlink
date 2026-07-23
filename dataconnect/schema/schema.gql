@@ -1,0 +1,34 @@
+type User @table {
+  email: String!
+  displayName: String!
+  avatarUrl: String
+  bio: String
+  createdAt: Timestamp
+}
+
+type Content @table {
+  title: String!
+  body: String!
+  status: String!
+  imageUrl: String
+  author: User
+}
+
+type Interaction @table {
+  type: String!
+  user: User!
+  content: Content!
+}
+
+type Notification @table {
+  message: String!
+  isRead: Boolean!
+  linkUrl: String
+  user: User!
+}
+
+type DeviceToken @table {
+  token: String!
+  platform: String!
+  user: User!
+}

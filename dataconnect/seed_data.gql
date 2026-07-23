@@ -1,0 +1,27 @@
+mutation SeedDatabase @transaction {
+  user_insertMany(data: [
+    { id: "00000000-0000-0000-0000-000000000001", email: "alice@example.com", displayName: "Alice" },
+    { id: "00000000-0000-0000-0000-000000000002", email: "bob@example.com", displayName: "Bob" },
+    { id: "00000000-0000-0000-0000-000000000003", email: "charlie@example.com", displayName: "Charlie" }
+  ])
+  content_insertMany(data: [
+    { id: "10000000-0000-0000-0000-000000000001", title: "First Post", body: "Hello world", status: "published", authorId: "00000000-0000-0000-0000-000000000001" },
+    { id: "10000000-0000-0000-0000-000000000002", title: "Second Post", body: "FDC is cool", status: "draft", authorId: "00000000-0000-0000-0000-000000000002" },
+    { id: "10000000-0000-0000-0000-000000000003", title: "Third Post", body: "Database seeding", status: "published", authorId: "00000000-0000-0000-0000-000000000003" }
+  ])
+  interaction_insertMany(data: [
+    { id: "20000000-0000-0000-0000-000000000001", type: "like", userId: "00000000-0000-0000-0000-000000000002", contentId: "10000000-0000-0000-0000-000000000001" },
+    { id: "20000000-0000-0000-0000-000000000002", type: "view", userId: "00000000-0000-0000-0000-000000000003", contentId: "10000000-0000-0000-0000-000000000001" },
+    { id: "20000000-0000-0000-0000-000000000003", type: "like", userId: "00000000-0000-0000-0000-000000000001", contentId: "10000000-0000-0000-0000-000000000002" }
+  ])
+  notification_insertMany(data: [
+    { id: "30000000-0000-0000-0000-000000000001", message: "New like on your post", isRead: false, userId: "00000000-0000-0000-0000-000000000001" },
+    { id: "30000000-0000-0000-0000-000000000002", message: "Welcome to our platform", isRead: true, userId: "00000000-0000-0000-0000-000000000002" },
+    { id: "30000000-0000-0000-0000-000000000003", message: "Weekly summary available", isRead: false, userId: "00000000-0000-0000-0000-000000000003" }
+  ])
+  deviceToken_insertMany(data: [
+    { id: "40000000-0000-0000-0000-000000000001", token: "abc-123", platform: "ios", userId: "00000000-0000-0000-0000-000000000001" },
+    { id: "40000000-0000-0000-0000-000000000002", token: "xyz-789", platform: "android", userId: "00000000-0000-0000-0000-000000000002" },
+    { id: "40000000-0000-0000-0000-000000000003", token: "def-456", platform: "ios", userId: "00000000-0000-0000-0000-000000000003" }
+  ])
+}
