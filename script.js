@@ -1,91 +1,91 @@
 const STORAGE_KEY = "fastlink-site-data-v1";
 
 const defaultData = {
-  heroTitle: "حلّ موثوق للإنترنت المنزلي والعملي",
+  heroTitle: "مرحبا بكم في موقعنا هنا سوف تجد كل أسالتك ",
   heroSubtitle:
-    "نحن في FastLink نقدم خدمات الإنترنت السريع عبر DSL وFTTH مع دعم فني عملي، إعدادات رواتر واضحة، وعروض مميزة لفترة محدودة.",
+    "نحن في FastLink نقدم خدمات الإنترنت السريع عبر DSL مع دعم فني عملي، إعدادات رواتر واضحة، وعروض مميزة لفترة محدودة.",
   offerTitle: "عرض محدود",
-  offerText: "خصم 15% على أول شهر مع تركيب مجاني عند اختيار باقة 400 Mbps أو أعلى.",
+  offerText: "خصم 50% على جميع الباقات لمدة 3 أشهر + شهران مجاناً للعملاء الجدد.",
   offerDuration: "متاح حتى 31 أغسطس 2026",
   aboutText:
     "FastLink هي شركة متخصصة في تقديم حلول الإنترنت المنزلي والاحترافي مع دعم فني متكامل وتوجيهات واضحة لضبط الأجهزة خطوة بخطوة. نركز على السرعة والاستقرار والراحة للعميل.",
   packages: [
     {
-      name: "باقة الأساسية",
-      speed: "100 Mbps",
-      price: 55,
-      promoPrice: 47000,
+      name: "Home 260 ",
+      Size: "150 G",
+      price: 296.4,
+      promoPrice: 166.4,
       duration: "شهر واحد",
-      description: "مناسبة للبيت العائلي البسيط مع دعم ممتاز.",
-    },
+      description: "خصم 50% لمدة 4شهور ."    },
     {
-      name: "باقة السوبر",
-      speed: "200 Mbps",
-      price: 80000,
-      promoPrice: 68000,
+      name: "Home 330",
+      Size: "200 G",
+      price: 376.2,
+      promoPrice: 211.2,
       duration: "شهر واحد",
-      description: "مثالية للأسر التي تستخدم أكثر من جهاز في نفس الوقت.",
+      description: "خصم 50% لمدة 3شهور + شهران مجاناً.",
     },
     {
-      name: "باقة برو",
-      speed: "400 Mbps",
-      price: 110000,
-      promoPrice: 94000,
+      name: "Home 395",
+      Size: "250 G",
+      price: 450.3,
+      promoPrice: 252.8,
       duration: "شهر واحد",
-      description: "أسرع تجربة للترفيه والعمل من المنزل.",
-    },
-  ],
-  routers: [
-    {
-      name: "Arvan 2000",
-      type: "روتر DSL مع دعم Wi-Fi",
-      image: "assets/router-1.svg",
+      description: "خصم 50% لمدة 3شهور + شهران مجاناً.",
     },
     {
-      name: "TP-Link AX3000",
-      type: "روتر FTTH حديث",
-      image: "assets/router-2.svg",
+      name: "Home 460",
+      Size: "300 G",
+      price: 524.4,
+      promoPrice: 294.4,
+      duration: "شهر واحد",
+      description: "خصم 50% لمدة 4شهور.",
     },
     {
-      name: "ZTE H360",
-      type: "روتر سهل الإعداد",
-      image: "assets/router-3.svg",
+      name: "Home 660",
+      Size: "500 G",
+      price: 752.4,
+      promoPrice: 422.4,
+      duration: "شهر واحد",
+      description: "خصم 50% لمدة 4شهور.",
     },
-  ],
-  steps: [
+  ], 
+  contacts:[
     {
-      title: "1) تحقق من الرقم الأرضي",
-      description: "تأكد من أن الخط الأرضي متصل بشكل صحيح وأن الخدمة نشطة قبل البدء.",
-    },
-    {
-      title: "2) قم بتوصيل الراوتر",
-      description: "اربط الكابل من المنفذ الأرضي أو FTTH بالراوتر ثم شغله وانتظر حتى يضيء المؤشر بشكل ثابت.",
-    },
-    {
-      title: "3) عدّل اسم الشبكة وكلمة المرور",
-      description: "من خلال صفحة الإعداد الخاصة بالراوتر، غيّر اسم الواي فاي إلى اسم مناسب وضع كلمة مرور قوية.",
+      name: "ا/ أسامة الصاوي",
+      role: "Executive Director",
+      phone: "01000052334",
     },
     {
-      title: "4) ضبط الإعدادات المتقدمة",
-      description: "إذا كنت تستخدم FTTH أو مودم حديث، حدّد نوع الشبكة ونظام 2.4/5 GHz ثم اختبر الاتصال.",
-    },
-  ],
-  contacts: [
-    {
-      name: "الأستاذ وليد",
-      role: "المحاسب المالية ومسؤول المبيعات",
-      phone: "+963 99 123 4567",
+      name: "ا/ وائل السيد",
+      role: "Financial Accountant and Sales Officer",
+      phone: "01011511104",
     },
     {
-      name: "الأستاذ محمود صلاح",
-      role: "خدمة العملاء",
-      phone: "+963 99 765 4321",
+      name: "ا/ محمود صالح",
+      role: "Customer Service",
+      phone: "01153822465",
     },
     {
-      name: "الأستاذ محمد اسامة",
-      role: "خدمة العملاء",
-      phone: "+963 99 555 1212",
+      name: "ا/ محمد عابدين",
+      role: "Customer Service",
+      phone: "01117509263",
     },
+    {
+      name: "ا/ محمد اسامة",
+      role: "Technical Support Manager",
+      phone: "01200063129",
+    },
+    {
+      name: "م/ أحمد اسامة",
+      role: "Web  Developer",
+      phone: "01282862462",
+    },
+    {
+      name: "ا/ حازم المهدي",
+      role: "Technical Support",
+      phone: "01554233617",
+    }
   ],
 };
 
@@ -159,7 +159,7 @@ function renderPackages(data) {
           <p>${pkg.description || ""}</p>
           <p class="price">${(pkg.promoPrice ?? pkg.price ?? 0).toLocaleString("ar-EG")} جنيه</p>
           <p>السعر الأصلي: ${(pkg.price ?? 0).toLocaleString("ar-EG")} جنيه</p>
-          <p>السرعة: ${pkg.speed || ""}</p>
+          <p>رصيد الباقة: ${pkg.speed || pkg.Size || ""}</p>
         </article>
       `
     )
@@ -194,8 +194,6 @@ function renderContacts(data) {
 function renderPage() {
   const data = loadData();
   renderHero(data);
-  renderRouters(data);
-  renderSteps(data);
   renderPackages(data);
   renderAbout(data);
   renderContacts(data);

@@ -5,41 +5,95 @@ let editingRouterIndex = -1;
 let editingPackageIndex = -1;
 
 const defaultData = {
-  heroTitle: "حلّ موثوق للإنترنت المنزلي والعملي",
+  heroTitle: "مرحبا بكم في موقعنا هنا سوف تجد كل أسالتك ",
   heroSubtitle:
-    "نحن في FastLink نقدم خدمات الإنترنت السريع عبر DSL وFTTH مع دعم فني عملي، إعدادات رواتر واضحة، وعروض مميزة لفترة محدودة.",
+    "نحن في FastLink نقدم خدمات الإنترنت السريع عبر DSL مع دعم فني عملي، إعدادات رواتر واضحة، وعروض مميزة لفترة محدودة.",
   offerTitle: "عرض محدود",
-  offerText: "خصم 15% على أول شهر مع تركيب مجاني عند اختيار باقة 400 Mbps أو أعلى.",
+  offerText: "خصم 50% على جميع الباقات لمدة 3 أشهر + شهران مجاناً للعملاء الجدد.",
   offerDuration: "متاح حتى 31 أغسطس 2026",
   aboutText:
     "FastLink هي شركة متخصصة في تقديم حلول الإنترنت المنزلي والاحترافي مع دعم فني متكامل وتوجيهات واضحة لضبط الأجهزة خطوة بخطوة. نركز على السرعة والاستقرار والراحة للعميل.",
   packages: [
     {
-      name: "باقة الأساسية",
-      speed: "100 Mbps",
-      price: 55,
-      promoPrice: 47,
+      name: "Home 260 ",
+      Size: "150 G",
+      price: 296.4,
+      promoPrice: 166.4,
       duration: "شهر واحد",
-      description: "مناسبة للبيت العائلي البسيط مع دعم ممتاز.",
+      description: "خصم 50% لمدة 4شهور ."    },
+    {
+      name: "Home 330",
+      Size: "200 G",
+      price: 376.2,
+      promoPrice: 211.2,
+      duration: "شهر واحد",
+      description: "خصم 50% لمدة 3شهور + شهران مجاناً.",
     },
     {
-      name: "باقة السوبر",
-      speed: "200 Mbps",
-      price: 80,
-      promoPrice: 68,
+      name: "Home 395",
+      Size: "250 G",
+      price: 450.3,
+      promoPrice: 252.8,
       duration: "شهر واحد",
-      description: "مثالية للأسر التي تستخدم أكثر من جهاز في نفس الوقت.",
+      description: "خصم 50% لمدة 3شهور + شهران مجاناً.",
     },
     {
-      name: "باقة برو",
-      speed: "400 Mbps",
-      price: 110,
-      promoPrice: 94,
+      name: "Home 460",
+      Size: "300 G",
+      price: 524.4,
+      promoPrice: 294.4,
       duration: "شهر واحد",
-      description: "أسرع تجربة للترفيه والعمل من المنزل.",
+      description: "خصم 50% لمدة 4شهور.",
+    },
+    {
+      name: "Home 660",
+      Size: "500 G",
+      price: 752.4,
+      promoPrice: 422.4,
+      duration: "شهر واحد",
+      description: "خصم 50% لمدة 4شهور.",
     },
   ],
   routers: [
+    {
+      name: "Router HG531sV1",
+      company: "Huawei ",
+      type: "يدعم تقنية ADSL2+ للاتصال بالإنترنت عبر خط الهاتف الأرضي النحاسي.",
+      image: "https://www.google.com/imgres?q=router%20HG531sV1&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D3819118895079229&imgrefurl=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F1261369468052427%2Fposts%2F1707784726744230%2F&docid=rlqxjBbsRE5MdM&tbnid=HFicYHdb3DYqVM&vet=12ahUKEwiUsKSSluOVAxX4R_4FHTJ1DRYQnPAOegUIngEQAA..i&w=2048&h=1811&hcb=2&itg=1&ved=2ahUKEwiUsKSSluOVAxX4R_4FHTJ1DRYQnPAOegUIngEQAA",
+      description: "جهاز Router HG531sV1 هو راوتر من إنتاج شركة Huawei (هواوي)، كان يُوزع بشكل أساسي من قبل مزودي خدمات الإنترنت في مصر مثل (فودافون، أورانج، وتي داتا/WE). وهو عبارة عن بوابة منزلية مخصصة للاتصال بالإنترنت.",
+      steps: [
+        {
+          title: " توصيل الكابل والرقم الأرضي",
+          text: "تأكد من توصيل الكابل الأرضي وكبل الLAN الخاص بالكمبيوتر بشكل صحيح ثم شغّل الراوتر وانتظر حتى يثبت المؤشر.",
+          image: "assets/image/routerHG/eK1,2.png",
+        },
+        {
+          title: "تسجيل الدخول",
+          text: "افتح المتصفح واكتب 192.168.0.1 ثم أدخل بيانات الدخول.",
+          image: "assets/router-3.svg",
+        },
+        {
+          title: "إعداد الواي فاي",
+          text: "حدد اسم الشبكة وكلمة المرور ثم احفظ الإعدادات.",
+          image: "assets/hero.svg",
+        },
+        {
+          title: "إعداد الواي فاي",
+          text: "حدد اسم الشبكة وكلمة المرور ثم احفظ الإعدادات.",
+          image: "assets/hero.svg",
+        },
+        {
+          title: "إعداد الواي فاي",
+          text: "حدد اسم الشبكة وكلمة المرور ثم احفظ الإعدادات.",
+          image: "assets/hero.svg",
+        },
+        {
+          title: "إعداد الواي فاي",
+          text: "حدد اسم الشبكة وكلمة المرور ثم احفظ الإعدادات.",
+          image: "assets/hero.svg",
+        },
+      ],
+    },
     {
       name: "Arvan 2000",
       company: "FastLink",
@@ -64,30 +118,7 @@ const defaultData = {
         },
       ],
     },
-    {
-      name: "TP-Link AX3000",
-      company: "TP-Link",
-      type: "روتر FTTH حديث",
-      image: "assets/router-2.svg",
-      description: "مناسب للمنازل الحديثة التي تحتاج سرعة عالية وغطاء ممتاز.",
-      steps: [
-        {
-          title: "توصيل الكابل FTTH",
-          text: "أدخل كابل الإنترنت مباشرة إلى المنفذ WAN ثم شغّل الجهاز.",
-          image: "assets/router-2.svg",
-        },
-        {
-          title: "تسجيل الدخول",
-          text: "افتح المتصفح واكتب 192.168.0.1 ثم أدخل بيانات الدخول.",
-          image: "assets/router-3.svg",
-        },
-        {
-          title: "إعداد الواي فاي",
-          text: "حدد اسم الشبكة وكلمة المرور ثم احفظ الإعدادات.",
-          image: "assets/hero.svg",
-        },
-      ],
-    },
+    
   ],
   routerGuide: {
     routerName: "Arvan 2000",
@@ -112,24 +143,6 @@ const defaultData = {
       },
     ],
   },
-  steps: [
-    {
-      title: "1) تحقق من الرقم الأرضي",
-      description: "تأكد من أن الخط الأرضي متصل بشكل صحيح وأن الخدمة نشطة قبل البدء.",
-    },
-    {
-      title: "2) قم بتوصيل الراوتر",
-      description: "اربط الكابل من المنفذ الأرضي أو FTTH بالراوتر ثم شغله وانتظر حتى يضيء المؤشر بشكل ثابت.",
-    },
-    {
-      title: "3) عدّل اسم الشبكة وكلمة المرور",
-      description: "من خلال صفحة الإعداد الخاصة بالراوتر، غيّر اسم الواي فاي إلى اسم مناسب وضع كلمة مرور قوية.",
-    },
-    {
-      title: "4) ضبط الإعدادات المتقدمة",
-      description: "إذا كنت تستخدم FTTH أو مودم حديث، حدّد نوع الشبكة ونظام 2.4/5 GHz ثم اختبر الاتصال.",
-    },
-  ],
   contacts: [
     {
       name: "الأستاذ وليد",
@@ -186,7 +199,7 @@ function renderPackages(data) {
       (pkg, index) => `
         <div class="admin-item">
           <div>
-            <strong>${pkg.name}</strong> — ${pkg.speed} — ${pkg.promoPrice} $
+            <strong>${pkg.name}</strong> — ${pkg.speed || pkg.Size || ""} — ${pkg.promoPrice ?? pkg.price ?? 0} جنيه
           </div>
           <div>
             <button data-edit-package="${index}">تعديل</button>
@@ -211,7 +224,7 @@ function resetPackageForm() {
 function fillPackageForm(data, index) {
   const pkg = data.packages[index];
   document.getElementById("packageName").value = pkg.name || "";
-  document.getElementById("packageSpeed").value = pkg.speed || "";
+  document.getElementById("packageSpeed").value = pkg.speed || pkg.Size || "";
   document.getElementById("packagePrice").value = pkg.price || "";
   document.getElementById("packagePromoPrice").value = pkg.promoPrice || "";
   document.getElementById("packageDuration").value = pkg.duration || "";
@@ -258,15 +271,15 @@ function fillRouterForm(data, index) {
   document.getElementById("routerType").value = router.type || "";
   document.getElementById("routerImage").value = router.image || "";
   document.getElementById("routerDescription").value = router.description || "";
-  document.getElementById("routerStep1Title").value = router.steps?.[0]?.title || "";
-  document.getElementById("routerStep1Text").value = router.steps?.[0]?.text || "";
-  document.getElementById("routerStep1Image").value = router.steps?.[0]?.image || "";
-  document.getElementById("routerStep2Title").value = router.steps?.[1]?.title || "";
-  document.getElementById("routerStep2Text").value = router.steps?.[1]?.text || "";
-  document.getElementById("routerStep2Image").value = router.steps?.[1]?.image || "";
-  document.getElementById("routerStep3Title").value = router.steps?.[2]?.title || "";
-  document.getElementById("routerStep3Text").value = router.steps?.[2]?.text || "";
-  document.getElementById("routerStep3Image").value = router.steps?.[2]?.image || "";
+
+  const steps = Array.isArray(router.steps) ? router.steps : [];
+  for (let stepIndex = 1; stepIndex <= 6; stepIndex += 1) {
+    const step = steps[stepIndex - 1];
+    document.getElementById(`routerStep${stepIndex}Title`).value = step?.title || "";
+    document.getElementById(`routerStep${stepIndex}Text`).value = step?.text || "";
+    document.getElementById(`routerStep${stepIndex}Image`).value = step?.image || "";
+  }
+
   const submitButton = document.getElementById("router-submit-btn");
   if (submitButton) submitButton.textContent = "حفظ التغييرات";
   const status = document.getElementById("router-edit-status");
@@ -285,9 +298,11 @@ function bindEvents(data) {
 
   document.getElementById("package-form").addEventListener("submit", (event) => {
     event.preventDefault();
+    const speedValue = document.getElementById("packageSpeed").value;
     const packageData = {
       name: document.getElementById("packageName").value,
-      speed: document.getElementById("packageSpeed").value,
+      speed: speedValue,
+      Size: speedValue,
       price: Number(document.getElementById("packagePrice").value),
       promoPrice: Number(document.getElementById("packagePromoPrice").value),
       duration: document.getElementById("packageDuration").value,
@@ -312,17 +327,21 @@ function bindEvents(data) {
     const mainImageValue = document.getElementById("routerImage").value.trim();
     const mainImage = mainImageFile ? await readFileAsDataURL(mainImageFile) : mainImageValue;
 
-    const step1ImageFile = document.getElementById("routerStep1ImageFile").files[0];
-    const step1ImageValue = document.getElementById("routerStep1Image").value.trim();
-    const step1Image = step1ImageFile ? await readFileAsDataURL(step1ImageFile) : step1ImageValue;
+    const stepFields = [];
+    for (let stepIndex = 1; stepIndex <= 6; stepIndex += 1) {
+      const imageFile = document.getElementById(`routerStep${stepIndex}ImageFile`)?.files?.[0];
+      const imageValue = document.getElementById(`routerStep${stepIndex}Image`)?.value?.trim() || "";
+      const image = imageFile ? await readFileAsDataURL(imageFile) : imageValue;
+      const stepData = {
+        title: document.getElementById(`routerStep${stepIndex}Title`)?.value || "",
+        text: document.getElementById(`routerStep${stepIndex}Text`)?.value || "",
+        image: image || "",
+      };
 
-    const step2ImageFile = document.getElementById("routerStep2ImageFile").files[0];
-    const step2ImageValue = document.getElementById("routerStep2Image").value.trim();
-    const step2Image = step2ImageFile ? await readFileAsDataURL(step2ImageFile) : step2ImageValue;
-
-    const step3ImageFile = document.getElementById("routerStep3ImageFile").files[0];
-    const step3ImageValue = document.getElementById("routerStep3Image").value.trim();
-    const step3Image = step3ImageFile ? await readFileAsDataURL(step3ImageFile) : step3ImageValue;
+      if (stepData.title || stepData.text || stepData.image) {
+        stepFields.push(stepData);
+      }
+    }
 
     const routerData = {
       name: document.getElementById("routerName").value,
@@ -330,23 +349,7 @@ function bindEvents(data) {
       type: document.getElementById("routerType").value,
       image: mainImage || "",
       description: document.getElementById("routerDescription").value,
-      steps: [
-        {
-          title: document.getElementById("routerStep1Title").value,
-          text: document.getElementById("routerStep1Text").value,
-          image: step1Image || "",
-        },
-        {
-          title: document.getElementById("routerStep2Title").value,
-          text: document.getElementById("routerStep2Text").value,
-          image: step2Image || "",
-        },
-        {
-          title: document.getElementById("routerStep3Title").value,
-          text: document.getElementById("routerStep3Text").value,
-          image: step3Image || "",
-        },
-      ],
+      steps: stepFields,
     };
 
     if (editingRouterIndex >= 0) {
@@ -452,5 +455,5 @@ function init() {
     }
   });
 }
-
+  
 init();

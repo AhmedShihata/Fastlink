@@ -277,7 +277,7 @@ a {
 .site-footer {
   background: #0d223d;
   color: white;
-  padding: 1rem 0;
+  padding: .5rem 0;
 }
 
 .site-footer a {
@@ -324,6 +324,7 @@ a {
 .guide-card img {
   margin-top: 1rem;
   border-radius: 1rem;
+  width: 60%;
 }
 
 .auth-card {

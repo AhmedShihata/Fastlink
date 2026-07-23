@@ -1,5 +1,26 @@
 const STORAGE_KEY = "fastlink-site-data-v1";
 
+
+function renderRouters(data) {
+  const container = document.getElementById("routers-list");
+  const routers = Array.isArray(data.routers) ? data.routers : [];
+  container.innerHTML = routers
+    .map(
+      (router, index) => `
+        <article class="card">
+          <img src="${router.image || "assets/router-1.svg"}" alt="${router.name || "روتر"}" />
+          <h3>${router.name || "روتر"}</h3>
+          <p>${router.company || "FastLink"}</p>
+          <p>${router.type || ""}</p>
+          <p>${router.description || ""}</p>
+          <a class="btn btn-secondary router-mode-btn" href="router-mode.html?router=${index}">عرض طريقة الضبط</a>
+        </article>
+        
+      `
+    )
+    .join("");
+}
+
 function loadData() {
   const saved = localStorage.getItem(STORAGE_KEY);
   if (!saved) return null;
@@ -25,26 +46,48 @@ function renderGuide() {
   if (!router) return;
 
   document.getElementById("guide-title").textContent = `${router.name || "الراوتر"} | دليل الضبط`;
-  document.getElementById("guide-company").textContent = router.company || data.routerGuide?.companyName || "FastLink";
+  document.getElementById("guide-company").textContent = router.company || data.routerGuide?.companyName || "";
   document.getElementById("guide-description").textContent = router.description || data.routerGuide?.description || "";
-  document.getElementById("guide-main-image").src = router.image || data.routerGuide?.mainImage || "";
-  document.getElementById("guide-main-image").alt = router.name || "الراوتر";
+  document.getElementById("");
+  const mainImage = document.getElementById("guide-main-image");
+  mainImage.src = router.image || data.routerGuide?.mainImage || "";
+  mainImage.alt = router.name || "الراوتر";
 
   const steps = router.steps || data.routerGuide?.steps || [];
-  document.getElementById("guide-step-1-title").textContent = steps[0]?.title || "";
-  document.getElementById("guide-step-1-text").textContent = steps[0]?.text || "";
-  document.getElementById("guide-step-1-image").src = steps[0]?.image || "";
-  document.getElementById("guide-step-1-image").alt = steps[0]?.title || "";
-
-  document.getElementById("guide-step-2-title").textContent = steps[1]?.title || "";
-  document.getElementById("guide-step-2-text").textContent = steps[1]?.text || "";
-  document.getElementById("guide-step-2-image").src = steps[1]?.image || "";
-  document.getElementById("guide-step-2-image").alt = steps[1]?.title || "";
-
-  document.getElementById("guide-step-3-title").textContent = steps[2]?.title || "";
-  document.getElementById("guide-step-3-text").textContent = steps[2]?.text || "";
-  document.getElementById("guide-step-3-image").src = steps[2]?.image || "";
-  document.getElementById("guide-step-3-image").alt = steps[2]?.title || "";
+  const stepsContainer = document.getElementById("guide-steps");
+  stepsContainer.innerHTML = steps.length
+    ? steps
+        .map(
+          (step, index) => `
+            <section class="guide-card">
+              <h2>${index + 1}) ${step.title || "خطوة"}</h2>
+              <p>${step.text || ""}</p>
+              ${step.image ? `<img src="${step.image}" alt="${step.title || "خطوة"}" />` : ""}
+            </section>
+            
+          `
+        )
+        .join("")
+    : '<p>لا توجد خطوات متاحة لهذا الراوتر حالياً.</p>';
 }
 
+function renderRouters(data) {
+  const container = document.getElementById("routers-list");
+  const routers = Array.isArray(data.routers) ? data.routers : [];
+  container.innerHTML = routers
+    .map(
+      (router, index) => `
+        <article class="card">
+          <img src="${router.image || "assets/router-1.svg"}" alt="${router.name || "روتر"}" />
+          <h3>${router.name || "روتر"}</h3>
+          <p>${router.company || "FastLink"}</p>
+          <p>${router.type || ""}</p>
+          <p>${router.description || ""}</p>
+          <a class="btn btn-secondary router-mode-btn" href="router-mode.html?router=${index}">عرض طريقة الضبط</a>
+        </article>
+        
+      `
+    )
+    .join("");
+}
 renderGuide();
